@@ -38,10 +38,10 @@ During this project I will focus on profile customization functionality.
 * MongoDB
 * Lots of coffee ☕
 
-#Author(s)
+# Author(s)
 Ramon Meijers
 
-#License
+# License
 ```MIT License
 
 Copyright (c) 2019 Ramon96
