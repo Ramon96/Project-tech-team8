@@ -14,7 +14,7 @@ header {
     position: relative;
 }
 
-#premium{
+#premium {
     background-color: #448ad3;
     border: 0;
     font-weight: bold;
@@ -27,7 +27,7 @@ header {
     margin-top: 2%;
 }
 
-#SettingsLink{
+#SettingsLink {
     display: block;
     margin-top: 4%;
 }
@@ -80,13 +80,13 @@ main {
     display: block;
 }
 
-main form fieldset{
+main form fieldset {
     border: none;
     margin-top: 5%;
-    
+
 }
 
-main form legend{
+main form legend {
     font-size: 1.5em;
     color: #343557;
 }
@@ -116,15 +116,15 @@ main form input[type="submit"] {
     font-style: normal;
 }
 
-.moreSettings{
+.moreSettings {
     margin-top: 5%;
 }
 
-.moreSettings input{
+.moreSettings input {
     display: inline;
 }
 
-#zodiacGrid ul{
+#zodiacGrid ul {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     text-align: left;
