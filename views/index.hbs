@@ -5,19 +5,18 @@
 {{else}}
 images/capricorn.png
 {{/if}}
-" alt="This is your profile picture">
-{{#if message}}
-{{message}}
-{{else}}
-{{/if}}
+" alt="This is your profile picture"> {{#if message}} {{message}} {{else}} {{/if}}
 <form id="profileForm" action="/upload" method="POST" enctype="multipart/form-data">
   <input type="file" id="uploadFile" name="profileImage">
   <label for="uploadFile">Change</label>
-  {{!-- <button type="submit">Submit</button> --}}
+  {{!--
+  <button type="submit">Submit</button> --}}
 </form>
 
-Change profile picture
 
-<a href="#">Edit info</a>
+<a href="/editprofile">Edit info</a>
+<br>
 <a href="#">Settings</a>
-<a href="">Upgrade profile</a>
+<br>
+<a href="#">Upgrade profile</a>
+<br>
