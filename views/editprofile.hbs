@@ -1,34 +1,33 @@
-<form action="/editprofile/insert" method="POST">
+<form action="/editprofile/update" method="POST">
+    <h2>About me</h2>
     <label for="aboutme">About me</label>
-    <input type="text" name="aboutme" id="aboutme">
+    <textarea name="aboutme" id="aboutme">{{aboutme}}</textarea>
 
+    <h2>My function/education</h2>
     <label for="function">Function/Education</label>
-    <input type="text" name="function" id="function">
+    <input type="text" name="function" id="function" value="{{function}}">
+
+    <h2>Current Company/school</h2>
 
     <label for="company">Company/School</label>
-    <input type="text" name="company" id="company">
+    <input type="text" name="company" id="company" value="{{company}}">
 
+    <h2>Current recidence city</h2>
     <label for="city">City</label>
-    <input type="text" name="city" id="city">
+    <input type="text" name="city" id="city" value="{{city}}">
 
+    <h2>my Gender</h2>
+    {{#if isMale}}
     <label for="genderMale">Male</label>
-    <input type="radio" name="gender" id="genderMale">
+    <input type="radio" name="gender" id="genderMale" checked="checked" value="male">
 
     <label for="genderFemale">Female</label>
-    <input type="radio" name="gender" id="genderFemale">
+    <input type="radio" name="gender" id="genderFemale" value="female"> {{else}}
+    <label for="genderMale">Male</label>
+    <input type="radio" name="gender" id="genderMale" value="male">
+
+    <label for="genderFemale">Female</label>
+    <input type="radio" name="gender" id="genderFemale" value="female" checked="checked"> {{/if}}
     <br>
     <button type="submit">Save changes</button>
 </form>
-
-<div>
-    {{#each items}}
-    <article>
-        <div>About: {{this.aboutme}}</div>
-        <div></div>
-        <div></div>
-        <div></div>
-
-    </article>
-    {{/each}}
-
-</div>

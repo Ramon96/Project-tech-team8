@@ -57,25 +57,54 @@ nav li {
 	position: absolute;
 	z-index: -1;
 }
+#userProfileContainer{
+  position: relative;
+}
 
-label {
+#userProfileContainer label {
   background: #343557;
-  border-radius: 15px;
+  border-radius: 50%;
   color: white;
   cursor: pointer;
   padding: 2%;
   display: block;
-  width: max-content;
   margin: auto;
   margin-top: 2%;
   margin-bottom: 2%;
+  font-size: .8em;
+  width: 2em;
+  height: 2em;
+  line-height: 2em;
+  position: absolute;
+  top: 70%;
+  left: 60%;
 }
 
-label:hover{
-  background: #403eaa;
+#userProfileContainer label:hover{
+  background: #3e4067;
 }
 
-label:focus {
+#userProfileContainer label:focus {
 	outline: 1px dotted #000;
 	outline: -webkit-focus-ring-color auto 5px;
+}
+
+#premium{
+  background: linear-gradient(to left, #aa3b6a, #7b0867);
+  border-radius: 25px;
+  color: white;
+  cursor: pointer;
+  padding: 2%;
+  display: block;
+  margin: auto;
+  margin-top: 2%;
+  margin-bottom: 2%;
+  width: fit-content;
+  text-decoration: none;
+}
+
+p{
+  font-weight: lighter;
+  color: #565656;
+  font-style: italic;
 }
