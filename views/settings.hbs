@@ -1,41 +1,46 @@
+<h1>Settings</h1>
 <form action="/settings/update" method="POST">
+    <label for="username">Username</label>
+    <input type="text" name="username" id="username" value="{{username}}"> 
+
     <label for="email">Email</label>
     <input type="email" name="email" id="email" value="{{email}}">
 
     <label for="DoB">Date of birth</label>
-    <input type="date" name="DoB" id="DoB" value="{{dob}}">
+    <input type="date" name="DoB" id="DoB" max="2001-01-01" value="{{dob}}">
 
     <label for="maxDist">Max distance</label>
-    <input type="range" id="maxDist" name="maxDistance" list="tickmarks" min="0" max="100" step="5" value="{{maxDistance}}">
+    <input  id="maxDistSlider" type="range" id="maxDist" name="maxDistance" list="tickmarks" min="0" max="100" step="5" value="{{maxDistance}}">
+    <input type="text" id="rangeValue" value="{{maxDistance}}">
 
     <label for="minAge">Min age</label>
-    <input type="text" name="minAge" id="minAge" value="{{minAge}}">
+    <input type="number" min="18" name="minAge" id="minAge" value="{{minAge}}">
 
     <label for="maxAge">Max age</label>
-    <input type="text" name="maxAge" id="maxAge" value="{{maxAge}}"> {{#if prefMen}}
-    <label for="genderMale">Male</label>
+    <input type="number" name="maxAge" id="maxAge" value="{{maxAge}}"> 
+     <h2>I'm intrested in</h2>{{#if prefMen}}
     <input type="radio" name="gender" id="genderMale" checked="checked" value="male">
+    <label class="radio50" for="genderMale">Male</label>
 
-    <label for="genderFemale">Female</label>
-    <input type="radio" name="gender" id="genderFemale" value="female"> {{else}}
-    <label for="genderMale">Male</label>
+    <input type="radio" name="gender" id="genderFemale" value="female"> 
+    <label class="radio50" for="genderFemale">Female</label>{{else}}
     <input type="radio" name="gender" id="genderMale" value="male">
+    <label class="radio50" for="genderMale">Male</label>
 
-    <label for="genderFemale">Female</label>
-    <input type="radio" name="gender" id="genderFemale" value="female" checked="checked"> {{/if}}
+    <input type="radio" name="gender" id="genderFemale" value="female" checked="checked"> 
+    <label class="radio50" for="genderFemale">Female</label>{{/if}}
 
-    <label for="username">Username</label>
-    <input type="text" name="username" id="username" value="{{username}}"> {{#if pushNotification}}
-    <label for="pushOn">Push notification On</label>
+    <h2>Push notifications</h2>{{#if pushNotification}}
     <input type="radio" name="pushNotification" id="pushOn" checked="checked" value="pushOn">
+    <label class="radio50" for="pushOn">On</label>
 
-    <label for="pushOff">Push notification off</label>
-    <input type="radio" name="pushNotification" id="pushOff" value="pushOff"> {{else}}
-    <label for="pushOn">Push notification On</label>
+    <input type="radio" name="pushNotification" id="pushOff" value="pushOff"> 
+    <label class="radio50" for="pushOff">Off</label>{{else}}
     <input type="radio" name="pushNotification" id="pushOn" value="pushOn">
+    <label class="radio50" for="pushOn">On</label>
 
-    <label for="pushOff">Push notification off</label>
-    <input type="radio" name="pushNotification" id="pushOff" checked="checked" value="pushOff"> {{/if}}
+    <input type="radio" name="pushNotification" id="pushOff" checked="checked" value="pushOff"> 
+    <label class="radio50" for="pushOff">Off</label>{{/if}}
     <br>
     <a href="#">Help and support</a>
     <br>
@@ -47,9 +52,9 @@
     <br>
     <a href="#">License</a>
     <br>
-    <a href="#">Delete account</a>
+    <a class="warning" href="#">Delete account</a>
     <br>
-    <a href="">Log out</a>
+    <a class="warning" href="">Log out</a>
     <br>
     <br>
     <button type="submit">Save changes</button>

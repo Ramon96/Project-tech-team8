@@ -1,0 +1,100 @@
+<h1> insert</h1>
+<form action="/testarea/insert" method="POST">
+    Username
+    <input type="text" name="username" id="username">
+    profilePicture
+    <input type="text" name="profilePicture" id="profilePicture">
+    premium
+    <input type="text" name="premium" id="premium">
+    aboutme
+    <input type="text" name="aboutme" id="aboutme">
+    function
+    <input type="text" name="function" id="function">
+    company
+    <input type="text" name="company" id="company">
+    city
+    <input type="text" name="city" id="city">
+    isMale
+    <input type="text" name="isMale" id="isMale">
+    prefMen
+    <input type="text" name="prefMen" id="prefMen">
+    email
+    <input type="email" name="email" id="email">
+    minAge
+    <input type="text" name="minAge" id="minAge">
+    maxAge
+    <input type="text" name="maxAge" id="maxAge">
+    maxDistance
+    <input type="text" name="maxDistance" id="maxDistance">
+    DoB
+    <input type="date" name="DoB" id="DoB">
+    pushNotification
+    <input type="text" name="pushNotification" id="pushNotification">
+        <button type="submit">insert</button>
+
+</form>
+
+<h1> Get</h1>
+<a href="/testarea/get-data">Get data</a>
+{{#each items}}
+    <div>id: {{this.id}} </div>
+    <div>username: {{this.username}} </div>
+    <div>profilepic: {{this.profilePicture}} </div>
+    <div>premium: {{this.premium}} </div>
+    <div>aboutme: {{this.aboutme}} </div>
+    <div>function: {{this.function}} </div>
+    <div>company: {{this.company}} </div>
+    <div>city: {{this.city}} </div>
+    <div>isMale: {{this.isMale}} </div>
+    <div>prefMen: {{this.prefMen}} </div>
+    <div>email: {{this.email}} </div>
+    <div>minAge: {{this.minAge}} </div>
+    <div>maxAge: {{this.maxAge}} </div>
+    <div>maxDist: {{this.maxDistance}} </div>
+    <div>DoB: {{this.DoB}} </div>
+    <div>pushNotification: {{this.pushNotification}} </div>
+
+{{/each}}
+
+<h1>Update</h1>
+<form action="/testarea/update" method="POST">
+    ID
+    <input type="text" name="chosenId" id="chosenId">
+    Username
+    <input type="text" name="username" id="username">
+    profilePicture
+    <input type="text" name="profilePicture" id="profilePicture">
+    premium
+    <input type="text" name="premium" id="premium">
+    aboutme
+    <input type="text" name="aboutme" id="aboutme">
+    function
+    <input type="text" name="function" id="function">
+    company
+    <input type="text" name="company" id="company">
+    city
+    <input type="text" name="city" id="city">
+    isMale
+    <input type="text" name="isMale" id="isMale">
+    prefMen
+    <input type="text" name="prefMen" id="prefMen">
+    email
+    <input type="email" name="email" id="email">
+    minAge
+    <input type="text" name="minAge" id="minAge">
+    maxAge
+    <input type="text" name="maxAge" id="maxAge">
+    maxDistance
+    <input type="text" name="maxDistance" id="maxDistance">
+    DoB
+    <input type="date" name="DoB" id="DoB">
+    pushNotification
+    <input type="text" name="pushNotification" id="pushNotification">
+        <button type="submit">Update</button>
+</form>
+<h1>DELETE</h1>
+<form action="/testarea/delete" method="POST">
+ID
+    <input type="text" name="chosenId" id="chosenId">
+    <button type="submit">Delete</button>
+</form>

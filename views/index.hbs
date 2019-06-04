@@ -14,11 +14,14 @@ images/capricorn.png
     <label for="uploadFile">Edit</label>
   </form>
 </div>
-<p> "{{ aboutme }}"</p>
-<a href="/editprofile">Edit info</a>
+<div id="indexMenu">
+<p id="indexBio"> "{{ aboutme }}"</p>
+
+<a class="buttonIcon" href="/editprofile"><img src="/images/edit.svg" alt="Edit info"><br>Edit info</a>
 <br>
-<a href="/settings">Settings</a>
+<a class="buttonIcon" href="/settings"><img src="/images/settings.svg" alt="Settings"><br>Settings</a>
 <br> {{#if premium}} {{else}}
 <a id="premium" href="#">Go premium</a>
 {{/if}}
 <br>
+</div>
