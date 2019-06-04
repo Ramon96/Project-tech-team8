@@ -1,3 +1,4 @@
+// import dependencies
 var createError = require('http-errors');
 var express = require('express');
 var path = require('path');
@@ -9,20 +10,19 @@ var expressValidator = require('express-validator');
 var expressSession =   require('express-session');
 var mongoStore = require('connect-mongo')(expressSession);
 
-
+// define routes
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 
+// put express application in app variable
 var app = express();
 
-//multer storage engine
-
-
-// view engine setup
+// setup engine and views
 app.engine('hbs', hbs({extname: 'hbs', defaultLayout: 'layout', layoutsDir: __dirname + '/views/layouts/'}))
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'hbs');
 
+// assign express dependencies
 app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: false}));
@@ -33,6 +33,7 @@ app.use(expressSession({secret: 'max', saveUninitialized: false, resave: false})
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
+// assign routes
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 

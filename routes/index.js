@@ -1,3 +1,4 @@
+// import dependencies
 var express = require('express');
 var router = express.Router();
 var multer = require('multer');
@@ -5,16 +6,18 @@ var path = require('path');
 var mongoose = require('mongoose');
 require('dotenv').config({
   path: __dirname + '/.env'
-}); //???
+}); // TODO: check exact behavior
 
+// connect to database
 mongoose.connect('mongodb://localhost:27018/test', {
   useNewUrlParser: true
 });
 var Schema = mongoose.Schema;
 var id = "5cf4ef61c07e76b19c8adb52";
 
-console.log(process.env.USER_ID);
+// console.log(process.env.USER_ID);
 
+// define schema
 var userDataSchema = new Schema({
   username: String,
   profilePicture: String,
@@ -35,6 +38,7 @@ var userDataSchema = new Schema({
   collection: 'user-data'
 });
 
+// assign mongoose data schema to var userdata
 var userData = mongoose.model('UserData', userDataSchema);
 
 /* GET home page. */
@@ -51,6 +55,7 @@ router.get('/', function (req, res, next) {
     });
 });
 
+// store uploaded image
 const storage = multer.diskStorage({
   destination: './public/uploads/',
   filename: function (req, file, callback) {
@@ -58,6 +63,7 @@ const storage = multer.diskStorage({
   }
 });
 
+// process image
 const uploadImage = multer({
   storage: storage,
   limits: {
@@ -68,6 +74,7 @@ const uploadImage = multer({
   }
 }).single('profileImage');
 
+// check file type
 function checkFileExt(file, callback) {
   const fileExt = /jpeg|jpg|png|gif/;
   const extName = fileExt.test(path.extname(file.originalname).toLowerCase());
@@ -80,6 +87,7 @@ function checkFileExt(file, callback) {
   }
 }
 
+// process uploads
 router.post('/upload', function (req, res) {
   uploadImage(req, res, (error) => {
     if (error) {
@@ -110,17 +118,15 @@ router.post('/upload', function (req, res) {
 
 router.get('/editprofile', function (req, res, next) {
   userData.findById(id)
-    .then(function (doc) {
-      res.render('editprofile', {
-        aboutme: doc.aboutme,
-        function: doc.function,
-        company: doc.company,
-        city: doc.city,
-        isMale: doc.isMale
-      });
+  .then(function (doc) {
+    res.render('editprofile', {
+      aboutme: doc.aboutme,
+      function: doc.function,
+      company: doc.company,
+      city: doc.city,
+      isMale: doc.isMale
     });
-
-
+  });
 });
 
 router.post('/editprofile/update', function (req, res, next) {
@@ -268,5 +274,6 @@ router.post('/testarea/delete', function (req, res) {
   userData.findByIdAndRemove(chosenId).exec();
   res.redirect('/testarea');
 });
+
 
 module.exports = router;
