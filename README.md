@@ -134,6 +134,13 @@ node_modules
 # Author(s)
 Ramon Meijers
 
+# Used resources
+https://www.youtube.com/watch?v=65a5QQ3ZR2g&list=PL55RiY5tL51oGJorjEgl6NVeDbx_fO5jR
+I used this playlist to learn how to use Node.JS, Express, Mongo and Mongoose
+
+https://www.youtube.com/watch?v=9Qzmri1WaaE
+I Used this video guide to store a Image on a local folder, And change the current user profile
+
 # License
 ```MIT License
 
