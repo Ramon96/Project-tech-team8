@@ -38,7 +38,7 @@ During this project I will focus on profile customization functionality.
 * MongoDB
 * Lots of coffee ☕
 
-# Documentatio 
+# Documentation 
 The app is build on a Express server. We use mongoose to connect to a MongoDB database.
 Database settings are stored the dotenv file.
 
@@ -86,6 +86,49 @@ Function Quack(duck){
 ...
 }
 
+```
+
+# Folder structure
+Your folder structure should look something like this
+```
+Assets
+ - ....png
+bin
+ - www
+.node_modules
+public
+ - images
+ - javascript
+ - styles
+ - uploads
+routes
+ - index.js
+views
+ - layouts
+    - layouts.hbs
+ - partials
+    - header.hbs
+ - editprofile.hbs
+ - error.hbs
+ - index.hbs
+ - settings.hbs
+ - testarea.hbs
+.eslintrc.json
+.gitignore
+app.js
+package-lock.json
+package.json
+README.md
+
+```
+
+# .gitignore
+settings up your gitignore file is very important to prevent sensitive data being leaked
+your gitignore shouls look something like this.
+```
+node_modules
+.DS_Store
+.env
 ```
 
 # Author(s)
