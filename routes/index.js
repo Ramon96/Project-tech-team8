@@ -147,12 +147,26 @@ router.get('/settings', function (req, res) {
       maxAge: doc.maxAge,
       prefMen: doc.prefMen,
       username: doc.username,
-      pushNotification: doc.pushNotification
+      pushNotification: doc.pushNotification,
+      errors: req.session.errors,
+      succes: req.session.succes
     });
+    req.session.errors = null;
+    req.session.succes = null;
+
   });
 });
 
 router.post('/settings/update', function (req, res) {
+  req.check("email", "Email adress is not valid").isEmail();
+  var errors = req.validationErrors();
+  if (errors){
+    req.session.errors = errors;
+    req.session.succes = false;
+  }
+  else{
+    req.session.succes = true;
+  }
   userData.findById(id, function(err, doc){
     if (err){
       console.error('entry not found');
@@ -175,7 +189,9 @@ router.post('/settings/update', function (req, res) {
     else{
       doc.pushNotification = false;
     }
+    if(!errors){
     doc.save();
+    }
   });
 
   res.redirect('/settings')

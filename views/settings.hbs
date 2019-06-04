@@ -4,6 +4,8 @@
     <input type="text" name="username" id="username" value="{{username}}"> 
 
     <label for="email">Email</label>
+
+    <p class="warning"></p>
     <input type="email" name="email" id="email" value="{{email}}">
 
     <label for="DoB">Date of birth</label>
@@ -11,7 +13,7 @@
 
     <label for="maxDist">Max distance</label>
     <input  id="maxDistSlider" type="range" id="maxDist" name="maxDistance" list="tickmarks" min="0" max="100" step="5" value="{{maxDistance}}">
-    <input type="text" id="rangeValue" value="{{maxDistance}}">
+    <input type="text" id="rangeValue" value="{{maxDistance}} Km">
 
     <label for="minAge">Min age</label>
     <input type="number" min="18" name="minAge" id="minAge" value="{{minAge}}">
@@ -56,6 +58,15 @@
     <br>
     <a class="warning" href="">Log out</a>
     <br>
+    {{#if succes}}
+        <p>Saved changes!</p>
+    {{else}}
+        {{#if errors}}
+            {{#each errors}}
+            <p class="warning"> {{this.msg}}</p>
+            {{/each}}
+        {{/if}}
+    {{/if}}
     <br>
     <button type="submit">Save changes</button>
 </form>
