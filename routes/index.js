@@ -116,6 +116,7 @@ router.post('/upload', function (req, res) {
   })
 });
 
+// Get edit profile page
 router.get('/editprofile', function (req, res, next) {
   userData.findById(id)
   .then(function (doc) {
@@ -129,6 +130,7 @@ router.get('/editprofile', function (req, res, next) {
   });
 });
 
+// Change changed values in database
 router.post('/editprofile/update', function (req, res, next) {
   userData.findById(id, function (err, doc) {
     if (err) {
@@ -148,7 +150,7 @@ router.post('/editprofile/update', function (req, res, next) {
   res.redirect('/editprofile');
 });
 
-
+// Get settings page
 router.get('/settings', function (req, res) {
   userData.findById(id)
     .then(function (doc) {
@@ -169,6 +171,7 @@ router.get('/settings', function (req, res) {
     });
 });
 
+// Change settings values in database
 router.post('/settings/update', function (req, res) {
   // userData.findOne({username: req.body.username}, function(err, foundUser) {
     // if(foundUser == null){
@@ -206,10 +209,12 @@ router.post('/settings/update', function (req, res) {
   res.redirect('/settings')
 });
 
+// Get test area page
 router.get('/testarea', function (req, res) {
   res.render('testarea');
 });
 
+// Retrieve all entry's  from database
 router.get('/testarea/get-data', function (req, res) {
   userData.find()
     .then(function (doc) {
@@ -219,6 +224,7 @@ router.get('/testarea/get-data', function (req, res) {
     });
 });
 
+// insert into database
 router.post('/testarea/insert', function (req, res) {
   var item = {
     username: req.body.username,
@@ -242,6 +248,7 @@ router.post('/testarea/insert', function (req, res) {
   res.redirect('/testarea');
 });
 
+// update database entry of given id
 router.post('/testarea/update', function (req, res) {
   var chosenId = req.body.chosenId;
   userData.findById(chosenId, function (err, doc) {
@@ -269,6 +276,7 @@ router.post('/testarea/update', function (req, res) {
 
 });
 
+// Delete database entry of given ID
 router.post('/testarea/delete', function (req, res) {
   var chosenId = req.body.chosenId;
   userData.findByIdAndRemove(chosenId).exec();
