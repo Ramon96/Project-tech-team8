@@ -4,18 +4,18 @@ var router = express.Router();
 var multer = require('multer');
 var path = require('path');
 var mongoose = require('mongoose');
-// require('dotenv').config({
-//   path: __dirname + '/.env'
-// }); // TODO: check exact behavior
+require('dotenv').config({
+}); // TODO: check exact behavior
 
 // connect to database
-mongoose.connect('mongodb://localhost:27018/test', {
+mongoose.connect('mongodb://' + process.env.DB_HOST + ':' + process.env.DB_PORT + '/' + process.env.DB_NAME, {
   useNewUrlParser: true
 });
-var Schema = mongoose.Schema;
-var id = "5cf4ef61c07e76b19c8adb52";
 
-// console.log(process.env.USER_ID);
+var Schema = mongoose.Schema;
+var id = process.env.USER_ID;
+
+console.log(process.env.USER_ID);
 
 // define schema
 var userDataSchema = new Schema({
