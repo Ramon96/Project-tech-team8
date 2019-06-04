@@ -35,7 +35,9 @@
 </form>
 
 <h1> Get</h1>
-<a href="/testarea/get-data">Get data</a>
+<form action="/testarea/get-data" method="GET">
+<button type="submit">Get</button>
+{{!-- <a href="/testarea/get-data">Get data</a> --}}
 {{#each items}}
     <div>id: {{this.id}} </div>
     <div>username: {{this.username}} </div>

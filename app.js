@@ -7,6 +7,7 @@ var logger = require('morgan');
 var hbs = require('express-handlebars');
 var expressValidator = require('express-validator');
 var expressSession =   require('express-session');
+var mongoStore = require('connect-mongo')(expressSession);
 
 
 var indexRouter = require('./routes/index');

@@ -1,11 +1,12 @@
 <h1>Settings</h1>
 <form action="/settings/update" method="POST">
     <label for="username">Username</label>
+    {{#if usernameIsTaken}}
+    <p class="warning">{{usernameTaken}}</p>
+    {{/if}}
     <input type="text" name="username" id="username" value="{{username}}"> 
 
     <label for="email">Email</label>
-
-    <p class="warning"></p>
     <input type="email" name="email" id="email" value="{{email}}">
 
     <label for="DoB">Date of birth</label>
@@ -58,15 +59,6 @@
     <br>
     <a class="warning" href="">Log out</a>
     <br>
-    {{#if succes}}
-        <p>Saved changes!</p>
-    {{else}}
-        {{#if errors}}
-            {{#each errors}}
-            <p class="warning"> {{this.msg}}</p>
-            {{/each}}
-        {{/if}}
-    {{/if}}
     <br>
     <button type="submit">Save changes</button>
 </form>
