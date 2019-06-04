@@ -4,9 +4,9 @@ var router = express.Router();
 var multer = require('multer');
 var path = require('path');
 var mongoose = require('mongoose');
-require('dotenv').config({
-  path: __dirname + '/.env'
-}); // TODO: check exact behavior
+// require('dotenv').config({
+//   path: __dirname + '/.env'
+// }); // TODO: check exact behavior
 
 // connect to database
 mongoose.connect('mongodb://localhost:27018/test', {
