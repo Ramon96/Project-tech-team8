@@ -38,6 +38,99 @@ During this project I will focus on profile customization functionality.
 * MongoDB
 * Lots of coffee ☕
 
+# Documentation 
+The app is build on a Express server. We use mongoose to connect to a MongoDB database.
+Database settings are stored the dotenv file.
+
+Your dotenv should look something like this
+```
+DB_HOST = yourhost
+DB_PORT = yourport
+DB_NAME = yourdbname
+USER_ID = 'youruserid';
+```
+
+During this project we make use of es5 notation.
+The reasoning for this is that the dev team has more experience with this kind of notation.
+Your Eslint should look something like this.
+```
+{
+    "env": {
+        "browser": true,
+        "es5": true,
+        "node": true
+    },
+    "extends": "eslint:recommended",
+    "globals": {
+        "Atomics": "readonly",
+        "SharedArrayBuffer": "readonly"
+    },
+    "parserOptions": {
+        "ecmaVersion": 2018
+    },
+    "rules": {
+        "semi": "error"
+    }
+}
+```
+It is important to note to do's like so
+`// TODO: Do the dishes`
+During development we use VSCode and our code editor picks these Todo's up using the [TODO Parser](https://marketplace.visualstudio.com/items?itemName=minhthai.vscode-todo-parser) plugin.
+
+Please document your code using comments.
+Specify what a function does
+
+```
+// This function makes the duck quack.
+Function Quack(duck){
+...
+}
+
+```
+
+# Folder structure
+Your folder structure should look something like this
+```
+Assets
+ - ....png
+bin
+ - www
+.node_modules
+public
+ - images
+ - javascript
+ - styles
+ - uploads
+routes
+ - index.js
+views
+ - layouts
+    - layouts.hbs
+ - partials
+    - header.hbs
+ - editprofile.hbs
+ - error.hbs
+ - index.hbs
+ - settings.hbs
+ - testarea.hbs
+.eslintrc.json
+.gitignore
+app.js
+package-lock.json
+package.json
+README.md
+
+```
+
+# .gitignore
+settings up your gitignore file is very important to prevent sensitive data being leaked
+your gitignore shouls look something like this.
+```
+node_modules
+.DS_Store
+.env
+```
+
 # Author(s)
 Ramon Meijers
 
