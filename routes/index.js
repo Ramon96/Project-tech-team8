@@ -8,7 +8,11 @@ require('dotenv').config({
 }); // TODO: check exact behavior
 
 // connect to database
-mongoose.connect('mongodb://' + process.env.DB_HOST + ':' + process.env.DB_PORT + '/' + process.env.DB_NAME, {
+// mongoose.connect('mongodb://' + process.env.DB_HOST + ':' + process.env.DB_PORT + '/' + process.env.DB_NAME, {
+//   useNewUrlParser: true
+// });
+
+mongoose.connect(process.env.DB_URL, {
   useNewUrlParser: true
 });
 
