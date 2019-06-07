@@ -1,0 +1,28 @@
+<h1>Edit profile</h1>
+<form action="/editprofile/update" method="POST">
+    <label for="aboutme">About me</label>
+    <textarea name="aboutme" id="aboutme">{{aboutme}}</textarea>
+
+    <label for="function">Function/Education</label>
+    <input type="text" name="function" id="function" value="{{function}}">
+
+    <label for="company">Company/School</label>
+    <input type="text" name="company" id="company" value="{{company}}">
+
+    <label for="city">City</label>
+    <input type="text" name="city" id="city" value="{{city}}">
+
+    <h2>I am a</h2>
+    {{#if isMale}}
+    <input type="radio" name="gender" id="genderMale" checked="checked" value="male">
+    <label class="radio50" for="genderMale">Male</label>
+    <input type="radio" name="gender" id="genderFemale" value="female">
+    <label class="radio50" for="genderFemale">Female</label>{{else}}
+    <input type="radio" name="gender" id="genderMale" value="male">
+    <label class="radio50" for="genderMale">Male</label>
+
+    <input type="radio" name="gender" id="genderFemale" value="female" checked="checked"> 
+    <label class="radio50" for="genderFemale">Female</label>{{/if}}
+    <br>
+    <button type="submit">Save changes</button>
+</form>

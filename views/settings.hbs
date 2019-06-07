@@ -1,0 +1,64 @@
+<h1>Settings</h1>
+<form action="/settings/update" method="POST">
+    <label for="username">Username</label>
+    {{#if usernameIsTaken}}
+    <p class="warning">{{usernameTaken}}</p>
+    {{/if}}
+    <input type="text" name="username" id="username" value="{{username}}"> 
+
+    <label for="email">Email</label>
+    <input type="email" name="email" id="email" value="{{email}}">
+
+    <label for="DoB">Date of birth</label>
+    <input type="date" name="DoB" id="DoB" max="2001-01-01" value="{{dob}}">
+
+    <label for="maxDist">Max distance</label>
+    <input  id="maxDistSlider" type="range" id="maxDist" name="maxDistance" list="tickmarks" min="0" max="100" step="5" value="{{maxDistance}}">
+    <input type="text" id="rangeValue" value="{{maxDistance}} Km">
+
+    <label for="minAge">Min age</label>
+    <input type="number" min="18" name="minAge" id="minAge" value="{{minAge}}">
+
+    <label for="maxAge">Max age</label>
+    <input type="number" name="maxAge" id="maxAge" value="{{maxAge}}"> 
+     <h2>I'm intrested in</h2>{{#if prefMen}}
+    <input type="radio" name="gender" id="genderMale" checked="checked" value="male">
+    <label class="radio50" for="genderMale">Male</label>
+
+    <input type="radio" name="gender" id="genderFemale" value="female"> 
+    <label class="radio50" for="genderFemale">Female</label>{{else}}
+    <input type="radio" name="gender" id="genderMale" value="male">
+    <label class="radio50" for="genderMale">Male</label>
+
+    <input type="radio" name="gender" id="genderFemale" value="female" checked="checked"> 
+    <label class="radio50" for="genderFemale">Female</label>{{/if}}
+
+    <h2>Push notifications</h2>{{#if pushNotification}}
+    <input type="radio" name="pushNotification" id="pushOn" checked="checked" value="pushOn">
+    <label class="radio50" for="pushOn">On</label>
+
+    <input type="radio" name="pushNotification" id="pushOff" value="pushOff"> 
+    <label class="radio50" for="pushOff">Off</label>{{else}}
+    <input type="radio" name="pushNotification" id="pushOn" value="pushOn">
+    <label class="radio50" for="pushOn">On</label>
+
+    <input type="radio" name="pushNotification" id="pushOff" checked="checked" value="pushOff"> 
+    <label class="radio50" for="pushOff">Off</label>{{/if}}
+    <br>
+    <a href="#">Help and support</a>
+    <br>
+    <a href="#">Safety tips</a>
+    <br>
+    <a href="#">Privacy</a>
+    <br>
+    <a href="#">Terms of use</a>
+    <br>
+    <a href="#">License</a>
+    <br>
+    <a class="warning" href="#">Delete account</a>
+    <br>
+    <a class="warning" href="">Log out</a>
+    <br>
+    <br>
+    <button type="submit">Save changes</button>
+</form>

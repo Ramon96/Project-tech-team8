@@ -1,0 +1,244 @@
+html,
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    font-size: 1em;
+    text-align: center;
+}
+
+/* Header styles */
+header {
+    height: 3.125em;
+    background-color: #343557;
+    width: 100%;
+    margin-bottom: 3%;
+    position: relative;
+}
+nav img {
+  width: 1em;
+  display: block;
+  margin: 0 auto;
+}
+
+nav ul {
+  display: flex;
+  height: 3.125em;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  position: relative;
+}
+
+nav li {
+  flex: 1;
+  align-items: center;
+  display: flex;
+  margin-left: 5%;
+}
+/* end header styles */
+
+h2{
+  font-weight: normal;
+  color: #343557;
+    text-align: left;
+    padding-left: 5%;
+    margin-bottom: 2%;
+    font-size: 1.2em;
+}
+
+
+label{
+  display: block;
+  color: #343557;
+  text-align: left;
+  padding-left: 5%;
+  margin-bottom: 2%;
+  font-size: 1.2em;
+}
+
+input, textarea{
+  width: 100%;
+  font-family: 'Roboto', sans-serif;
+  box-sizing: border-box;
+  padding-left: 5%;
+  margin-bottom: 5%;
+  border: none;
+  background: #ececec;
+  padding-top: 2%;
+  padding-bottom: 2%;
+  font-size: 1em;
+}
+
+
+
+
+
+#userProfile{
+  width: 40vw;
+  height: 40vw;
+  object-fit: cover;
+  display: block;
+  margin: auto;
+  border: solid black 1px;
+  border-radius: 50%;
+  margin-bottom: 5%;
+}
+
+#uploadFile{
+  width: 0.1px;
+	height: 0.1px;
+	opacity: 0;
+	overflow: hidden;
+	position: absolute;
+	z-index: -1;
+}
+#userProfileContainer{
+  position: relative;
+}
+
+#userProfileContainer label {
+  background: #343557;
+  border-radius: 50%;
+  color: white;
+  cursor: pointer;
+  padding: 2%;
+  display: block;
+  margin: auto;
+  margin-top: 2%;
+  margin-bottom: 2%;
+  font-size: .8em;
+  width: 2em;
+  height: 2em;
+  line-height: 2em;
+  position: absolute;
+  top: 70%;
+  left: 60%;
+}
+
+#userProfileContainer label:hover{
+  background: #3e4067;
+}
+
+#userProfileContainer label:focus {
+	outline: 1px dotted #000;
+	outline: -webkit-focus-ring-color auto 5px;
+}
+
+#premium{
+  background: linear-gradient(to left, #aa3b6a, #7b0867);
+  border-radius: 25px;
+  color: white;
+  cursor: pointer;
+  padding: 2%;
+  display: block;
+  margin: auto;
+  margin-top: 2%;
+  margin-bottom: 2%;
+  width: fit-content;
+  text-decoration: none;
+}
+
+#premium:hover{
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+  background: linear-gradient(to left, #bd4276, #a70c8c);
+}
+
+#indexMenu{
+  position: relative;
+}
+
+p{
+  font-weight: lighter;
+  color: #565656;
+  font-style: italic;
+}
+
+input[type="radio"], input[type="range"]{
+  box-sizing: border-box;
+  margin: 0;
+}
+
+input[type="radio"]{
+  display: none;
+}
+
+.radio50{
+  width: 50%;
+  background-color: #ececec;
+  text-align: center;
+  padding: 0;
+  padding-top: 2%;
+  padding-bottom: 2%;
+  /* Dit is waarschijnlijk niet semantisch, maar ik heb nog geen enkel andere oplossing kunnen vinden om 50% breede object naast elkaar te kunnen plaatsen */
+  float: left; 
+  color: black;
+  font-size: 1em;
+  margin-bottom: 5%;
+  cursor: pointer;
+}
+
+input[type="radio"]:checked + label{
+  background: #c4c4c4
+}
+
+.warning{
+  color: red;
+}
+
+button[type="submit"]{
+    background: #343557;
+    border-radius: 25px;
+    color: white;
+    cursor: pointer;
+    padding: 2%;
+    display: block;
+    margin: auto;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    width: fit-content;
+    text-decoration: none;
+}
+
+button[type="submit"]:hover{
+background: #3e4067;
+box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+}
+
+#indexBio{
+  margin-bottom: 15%;
+  padding-left: 15%;
+  padding-right: 15%;
+}
+
+.buttonIcon{
+  border: solid 1px #cccbcb;
+  border-radius: 50%;
+  display: block;
+  width: fit-content;
+  padding: 3%;
+  color: #565656;
+  position: absolute;
+  left: 30%;
+  top: 25%;
+  text-decoration: none;
+  font-size: 80%;
+}
+
+.buttonIcon img{
+  width: 2em;
+  height: 2em;
+}
+
+.buttonIcon:nth-of-type(2){
+  left: 55%;
+}
+
+.buttonIcon:hover{
+  border: solid 1px gray;
+box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+
+}
+
+input[type="range"]{
+  width: 80%;
+}
