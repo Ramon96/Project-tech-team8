@@ -1,32 +1,32 @@
 # About Zodimaniac
-Zodimaniac is a dating platform designed to match singles based on their zodiac signs. The user is able to tell a little bit about themselves, Post a picture and most importantly match with others based on their zodiac signs.
-If both users like each other than it is a match!
+Zodimaniac is a dating platform designed to match singles based on their zodiac signs. The user is able to tell a little bit about themselves, post a picture and most importantly be able to match with others based on their zodiac signs.
+If both users like each other than they have a match!
 
 Both party's can engage a conversation whenever they like. Zodimaniac will make sure to provide the latest horoscope so that the users are able to plan their date ahead on the most desired day.
-unmatching at any point is also a possibility.
+Unmatching at any point in time is also possibile.
 
 Some of the actions a user can take are: 
 * Register
-* Fill profile.
-* Edit profile.
-* Find matches.
+* Fill profile
+* Edit profile
+* Find matches
 * Like person
 * Dislike person
-* Chat with matches.
-* unmatch
-* Upgrade profile .
-* Receive notifications.
+* Chat with matches
+* Unmatch
+* Upgrade profile
+* Receive notifications
 
 # Focused feature
 During this project I will focus on profile customization functionality.
-**Job story**: When I sign up for a Dating site, I want to be able to create and edit my profile, So other singles can see who I am.
+**Job story**: When I sign up for a Dating site, I want to be able to create and edit my profile, so other singles can see who I am.
 
 # Installation
 
 **Cloning the project** 
 `git clone https://github.com/Ramon96/project-tech.git `
 
-**installing node modules**
+**Installing node modules**
 `npm install`
 
 # This App is build using
@@ -39,10 +39,10 @@ During this project I will focus on profile customization functionality.
 * Lots of coffee ☕
 
 # Documentation 
-The app is build on a Express server. We use mongoose to connect to a MongoDB database.
+The app is build on a Express server. We use Mongoose to connect to a MongoDB database.
 Database settings are stored the dotenv file.
 
-Your dotenv should look something like this
+Your dotenv should look something like this:
 ```
 DB_HOST = yourhost
 DB_PORT = yourport
@@ -73,12 +73,11 @@ Your Eslint should look something like this.
     }
 }
 ```
-It is important to note to do's like so
+It is important to note to-do's like so:
 `// TODO: Do the dishes`
 During development we use VSCode and our code editor picks these Todo's up using the [TODO Parser](https://marketplace.visualstudio.com/items?itemName=minhthai.vscode-todo-parser) plugin.
 
-Please document your code using comments.
-Specify what a function does
+Please document your code using comments, and specify what a function does.
 
 ```
 // This function makes the duck quack.
@@ -89,7 +88,7 @@ Function Quack(duck){
 ```
 
 # Folder structure
-Your folder structure should look something like this
+Your folder structure should look something like this:
 ```
 Assets
  - ....png
@@ -123,8 +122,8 @@ README.md
 ```
 
 # .gitignore
-settings up your gitignore file is very important to prevent sensitive data being leaked
-your gitignore shouls look something like this.
+Settings up your .gitignore file is very important to prevent sensitive data from being leaked.
+Your gitignore shouls look something like this:
 ```
 node_modules
 .DS_Store
@@ -139,7 +138,7 @@ https://www.youtube.com/watch?v=65a5QQ3ZR2g&list=PL55RiY5tL51oGJorjEgl6NVeDbx_fO
 I used this playlist to learn how to use Node.JS, Express, Mongo and Mongoose
 
 https://www.youtube.com/watch?v=9Qzmri1WaaE
-I Used this video guide to store a Image on a local folder, And change the current user profile
+This video guide was used to learn howto store a Image on a local folder, and how to change the current user profile
 
 # License
 ```MIT License
