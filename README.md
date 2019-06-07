@@ -2,7 +2,7 @@
 Zodimaniac is a dating platform designed to match singles based on their zodiac signs. The user is able to tell a little bit about themselves, post a picture and most importantly be able to match with others based on their zodiac signs.
 If both users like each other than they have a match!
 
-Both party's can engage a conversation whenever they like. Zodimaniac will make sure to provide the latest horoscope so that the users are able to plan their date ahead on the most desired day.
+Both parties can engage a conversation whenever they like. Zodimaniac will make sure to provide the latest horoscope so that the users are able to plan their date ahead on the most desired day.
 Unmatching at any point in time is also possibile.
 
 Some of the actions a user can take are: 
