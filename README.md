@@ -113,6 +113,39 @@ Your commit message should append the [gitmoji](https://gitmoji.carloscuesta.me/
 📱 working on responsive design
 ```
 
+# File structure
+Try to follow the following file structure
+```
+// Import dependencies
+var express = require('express');
+var router = express.Router();
+
+//Variable declerations
+var variable = "variable"
+
+// Your routes in logicall order
+
+router.get('/', function(req, res){
+    res.render('index', {
+        title: "hello world!"
+    });
+});
+
+router.post('/insert', function(req, res){
+    // do something
+});
+
+//function declerations
+
+function Something(){
+    //...
+}
+
+//Export the module
+module.exports = router;
+
+```
+
 # Folder structure
 Your folder structure should look something like this:
 ```
@@ -148,7 +181,7 @@ README.md
 ```
 
 # .gitignore
-Settings up your .gitignore file is very important to prevent sensitive data from being leaked.
+Settings up your .gitignore file is very important to prevent sensitive data from being pushed into the Git repo.
 Your gitignore shouls look something like this:
 ```
 node_modules
@@ -158,6 +191,9 @@ node_modules
 
 # Author(s)
 Ramon Meijers
+
+# Contributors 
+Wouter Dijnsdorp, Joeri Bouwman
 
 # Used resources
 https://www.youtube.com/watch?v=65a5QQ3ZR2g&list=PL55RiY5tL51oGJorjEgl6NVeDbx_fO5jR

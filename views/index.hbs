@@ -1,15 +1,7 @@
 <h1>{{ Username }}</h1>
-{{!--
-<img id="userProfile" src="
-{{#if UserProfile}}
-{{UserProfile}}
-{{else}}
-images/capricorn.png
-{{/if}}
-" alt="This is your profile picture"> --}}
 <div id="userProfileContainer">
   <img id="userProfile" src="{{UserProfile}}" alt="This is your profile picture"> {{#if message}} {{message}} {{else}} {{/if}}
-  <form id="profileForm" action="/upload" method="POST" enctype="multipart/form-data">
+  <form id="profileForm" action="/edit/upload" method="POST" enctype="multipart/form-data">
     <input type="file" id="uploadFile" name="profileImage">
     <label for="uploadFile">Edit</label>
   </form>
@@ -17,9 +9,9 @@ images/capricorn.png
 <div id="indexMenu">
 <p id="indexBio"> "{{ aboutme }}"</p>
 
-<a class="buttonIcon" href="/editprofile"><img src="/images/edit.svg" alt="Edit info"><br>Edit info</a>
+<a class="buttonIcon" href="/edit/editprofile"><img src="/images/edit.svg" alt="Edit info"><br>Edit info</a>
 <br>
-<a class="buttonIcon" href="/settings"><img src="/images/settings.svg" alt="Settings"><br>Settings</a>
+<a class="buttonIcon" href="/edit/settings"><img src="/images/settings.svg" alt="Settings"><br>Settings</a>
 <br> {{#if premium}} {{else}}
 <a id="premium" href="#">Go premium</a>
 {{/if}}
