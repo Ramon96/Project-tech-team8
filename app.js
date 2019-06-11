@@ -7,12 +7,14 @@ var bodyParser = require('body-parser');
 var logger = require('morgan');
 var hbs = require('express-handlebars');
 var expressValidator = require('express-validator');
-var expressSession =   require('express-session');
-var mongoStore = require('connect-mongo')(expressSession);
+var expressSession = require('express-session');
+
 
 // define routes
 var indexRouter = require('./routes/index');
-var usersRouter = require('./routes/users');
+var editpfRouter = require('./routes/editprofile');
+var signupRouter = require('./routes/signup');
+var matchingRouter = require('./routes/match');
 
 // put express application in app variable
 var app = express();
@@ -35,8 +37,9 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 // assign routes
 app.use('/', indexRouter);
-app.use('/users', usersRouter);
-
+app.use('/edit', editpfRouter);
+app.use('/signup', signupRouter);
+app.use('/match', matchingRouter);
 
 
 // catch 404 and forward to error handler
