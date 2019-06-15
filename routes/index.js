@@ -7,14 +7,13 @@ var mongoose = require('mongoose');
 require('dotenv').config({
 }); // TODO: check exact behavior
 
-// connect to database
-// mongoose.connect('mongodb://' + process.env.DB_HOST + ':' + process.env.DB_PORT + '/' + process.env.DB_NAME, {
-//   useNewUrlParser: true
-// });
+ mongoose.connect('mongodb://' + process.env.DB_HOST + ':' + process.env.DB_PORT + '/' + process.env.DB_NAME, {
+   useNewUrlParser: true
+ });
 
-mongoose.connect(process.env.DB_URL, {
-  useNewUrlParser: true
-});
+//mongoose.connect(process.env.DB_URL, {
+//  useNewUrlParser: true
+//});
 
 var Schema = mongoose.Schema;
 var id = process.env.USER_ID;
