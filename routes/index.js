@@ -3,10 +3,7 @@ var express = require('express');
 var router = express.Router();
 var mongoose = require('mongoose');
 var bcrypt = require('bcrypt');
-require('dotenv').config({});
-
 var Schema = mongoose.Schema;
-
 // define schema
 var userDataSchema = new Schema({
     username: String,
@@ -29,11 +26,15 @@ var userDataSchema = new Schema({
 }, {
     collection: 'user-data'
 });
+var userData = mongoose.model('UserData', userDataSchema);
+require('dotenv').config({});
 
 userDataSchema.pre('save', function (next) {
     var user = this;
 
-    if(!user.isModified('password')) return next();
+    if(!user.isModified('password')) {
+        return next();
+    }
 
     this.hashPass(user.password, function (err, hash) {
         if (err) {
@@ -61,7 +62,6 @@ userDataSchema.methods.hashPass = function (givenPassword, cb) {
 };
 
 // assign mongoose data schema to var userdata
-var userData = mongoose.model('UserData', userDataSchema);
 
 // Local databse
 mongoose.connect(process.env.DB_LOCAL, {
@@ -73,7 +73,7 @@ mongoose.connect(process.env.DB_LOCAL, {
 //     useNewUrlParser: true
 //   });
 
-// Logs a message when succesfully connected to the database  
+// Logs a message when succesfully connected to the database
 mongoose.connection.on('connected', function () {
     console.log("Connected to mongoose..");
 });

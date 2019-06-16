@@ -4,17 +4,17 @@ var router = express.Router();
 var multer = require('multer');
 var path = require('path');
 var mongoose = require('mongoose');
-require('dotenv').config({});
-
 // assign mongoose data schema to var userdata
 var userData = mongoose.model('UserData');
+require('dotenv').config({});
+
 
 /* GET home page. */
 router.get('/', function (req, res) {
     if(!req.session.loggedin){
         console.log("Session bestaat nog niet");
         req.session.errormessage = "You need to login first";
-       return res.redirect('/login');
+        return res.redirect('/login');
     }
     userData.findOne({username: req.session.loggedin})
         .then(function (doc) {
@@ -66,7 +66,7 @@ router.get('/editprofile', function (req, res) {
     if(!req.session.loggedin){
         console.log("Session bestaat nog niet");
         req.session.errormessage = "You need to login first";
-       return res.redirect('/login');
+        return res.redirect('/login');
     }
     userData.findOne({username: req.session.loggedin})
         .then(function (doc) {
@@ -102,7 +102,7 @@ router.get('/settings', function (req, res) {
     if(!req.session.loggedin){
         console.log("Session bestaat nog niet");
         req.session.errormessage = "You need to login first";
-       return res.redirect('/login');
+        return res.redirect('/login');
     }
     userData.findOne({username: req.session.loggedin})
         .then(function (doc) {
