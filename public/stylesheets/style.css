@@ -7,34 +7,34 @@ body {
 }
 
 /* Header styles */
-header {
+  header {
+      height: 3.125em;
+      background-color: #343557;
+      width: 100%;
+      margin-bottom: 3%;
+      position: relative;
+  }
+  nav img {
+    width: 1em;
+    display: block;
+    margin: 0 auto;
+  }
+
+  nav ul {
+    display: flex;
     height: 3.125em;
-    background-color: #343557;
-    width: 100%;
-    margin-bottom: 3%;
+    list-style: none;
+    padding: 0;
+    margin: 0;
     position: relative;
-}
-nav img {
-  width: 1em;
-  display: block;
-  margin: 0 auto;
-}
+  }
 
-nav ul {
-  display: flex;
-  height: 3.125em;
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  position: relative;
-}
-
-nav li {
-  flex: 1;
-  align-items: center;
-  display: flex;
-  margin-left: 5%;
-}
+  nav li {
+    flex: 1;
+    align-items: center;
+    display: flex;
+    margin-left: 5%;
+  }
 /* end header styles */
 
 h2{
@@ -45,7 +45,6 @@ h2{
     margin-bottom: 2%;
     font-size: 1.2em;
 }
-
 
 label{
   display: block;
@@ -68,10 +67,6 @@ input, textarea{
   padding-bottom: 2%;
   font-size: 1em;
 }
-
-
-
-
 
 #userProfile{
   width: 40vw;

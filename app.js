@@ -10,6 +10,7 @@ var expressValidator = require('express-validator');
 var expressSession = require('express-session');
 
 
+
 // define routes
 var indexRouter = require('./routes/index');
 var editpfRouter = require('./routes/editprofile');
@@ -57,5 +58,9 @@ app.use(function(err, req, res, next) {
   res.status(err.status || 500);
   res.render('error');
 });
+
+app.listen(function(){
+  console.log("Server is running..");
+})
 
 module.exports = app;

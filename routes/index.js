@@ -30,6 +30,21 @@ var userDataSchema = new Schema({
 // assign mongoose data schema to var userdata
 var userData = mongoose.model('UserData', userDataSchema);
 
+// Local db
+mongoose.connect(process.env.DB_LOCAL, {
+    useNewUrlParser: true
+});
+
+// Atlas db
+// mongoose.connect(process.env.DB_URL, {
+//     useNewUrlParser: true
+//   });
+
+// Getting the ladingpage
+router.get('/', function(req, res){
+    res.render('landing');
+});
+
 // Get test area page
 router.get('/testarea', function (req, res) {
     res.render('testarea');

@@ -142,7 +142,7 @@ router.get('/settings', function (req, res) {
 
 // Change settings values in database
 router.post('/settings/update', function (req, res) {
-    userData.findById(id, function (err, doc) {
+    userData.findByIdss(id, function (err, doc) {
         if (err) {
             console.error('entry not found');
         }
