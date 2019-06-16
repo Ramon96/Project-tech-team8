@@ -1,25 +1,20 @@
-# About Zodimaniac
-Zodimaniac is a dating platform designed to match singles based on their zodiac signs. The user is able to tell a little bit about themselves, post a picture and most importantly be able to match with others based on their zodiac signs.
-If both users like each other than they have a match!
+# Zodimaniac
+![Zodimaniac's App Icon](https://github.com/Ramon96/project-tech/blob/master/Assets/app_icon.png?raw=true)
+> Zodimaniac is a dating platform designed to match singles based on their zodiac signs. The user is able to tell a little bit about 
+> themselves, post a picture and most importantly be able to match with others based on their zodiac signs.
+> If both users like each other than they have a match!
 
-Both party's can engage a conversation whenever they like. Zodimaniac will make sure to provide the latest horoscope so that the users are able to plan their date ahead on the most desired day.
-Unmatching at any point in time is also possibile.
+> Both party's can engage a conversation whenever they like. Zodimaniac will make sure to provide the latest horoscope so that the users  are able to plan their date ahead on the most desired day.
+>Unmatching at any point in time is also possibile.
 
 Some of the actions a user can take are: 
 * Register
-* Fill profile
+* Login
 * Edit profile
 * Find matches
 * Like person
 * Dislike person
-* Chat with matches
 * Unmatch
-* Upgrade profile
-* Receive notifications
-
-# Focused feature
-During this project I will focus on profile customization functionality.
-**Job story**: When I sign up for a Dating site, I want to be able to create and edit my profile, so other singles can see who I am.
 
 # Installation
 
@@ -28,6 +23,12 @@ During this project I will focus on profile customization functionality.
 
 **Installing node modules**
 `npm install`
+
+**Dotenv**
+This project makes use of the dotenv extension.
+When you try to install the project, you will most likeley get some errors. 
+This is because we are using a .env file that contains valueable information.
+Make sure to contact the repository owner to recieve the dotenv details
 
 # This App is build using
 * Code editor of choice
@@ -38,40 +39,12 @@ During this project I will focus on profile customization functionality.
 * MongoDB
 * Lots of coffee ☕
 
-# Documentation 
-The app is build on a Express server. We use Mongoose to connect to a MongoDB database.
-Database settings are stored the dotenv file.
+# Eslint
+To check for linting errors run
+`eslint ./`
+Please resolve all the errors and warnings before pushing your work.
 
-Your dotenv should look something like this:
-```
-DB_HOST = yourhost
-DB_PORT = yourport
-DB_NAME = yourdbname
-USER_ID = 'youruserid';
-```
-
-During this project we make use of es5 notation.
-The reasoning for this is that the dev team has more experience with this kind of notation.
-Your Eslint should look something like this.
-```
-{
-    "env": {
-        "browser": true,
-        "es5": true,
-        "node": true
-    },
-    "extends": "eslint:recommended",
-    "globals": {
-        "Atomics": "readonly",
-        "SharedArrayBuffer": "readonly"
-    },
-    "parserOptions": {
-        "ecmaVersion": 2018
-    },
-    "rules": {
-        "semi": "error"
-    }
-}
+# Code conventions
 ```
 It is important to note to-do's like so:
 `// TODO: Do the dishes`
@@ -89,8 +62,8 @@ Function Quack(duck){
 
 During this project we make use of [{{handlebars}}](https://handlebarsjs.com/)
 
-# Commiting
-When commiting to the master branch, review with atleast 1 other programmer is required. 
+# Merging
+When Merging to the master branch, review with atleast 1 other programmer is required. 
 Your commit message should append the [gitmoji](https://gitmoji.carloscuesta.me/) notation style followed with a description of the work you are going to append to the project.
 
 ## Gitmoji cheatsheet
