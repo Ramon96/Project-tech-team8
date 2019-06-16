@@ -56,7 +56,7 @@ node_modules
 ```
 
 # Wiki
-For the research, technical researcg and collebarting please check out our [Wiki](https://github.com/Ramon96/Project-tech-team8/wiki)
+For the research, technical research and collaboration please check out our [Wiki](https://github.com/Ramon96/Project-tech-team8/wiki)
 
 # Author(s)
 Ramon Meijers
