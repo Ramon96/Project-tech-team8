@@ -12,6 +12,7 @@ var expressSession = require('express-session');
 
 // define routes
 var indexRouter = require('./routes/index');
+var loginRouter = require('./routes/login');
 var editpfRouter = require('./routes/editprofile');
 var signupRouter = require('./routes/signup');
 var matchingRouter = require('./routes/match');
@@ -40,6 +41,7 @@ app.use('/', indexRouter);
 app.use('/edit', editpfRouter);
 app.use('/signup', signupRouter);
 app.use('/match', matchingRouter);
+app.use('/login', loginRouter);
 
 
 // catch 404 and forward to error handler
@@ -57,5 +59,9 @@ app.use(function(err, req, res, next) {
   res.status(err.status || 500);
   res.render('error');
 });
+
+app.listen(function(){
+  console.log("Server is running..");
+})
 
 module.exports = app;

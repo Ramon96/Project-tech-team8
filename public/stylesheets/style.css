@@ -6,35 +6,52 @@ body {
     text-align: center;
 }
 
+#landing{
+  background: rgba(0, 0, 0, 1);
+}
+/* Background with an overlay */
+#landing::after{
+  background: url("../images/landing_bg.png") no-repeat;
+  background-size: cover;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+  opacity: 0.8; 
+}
+
 /* Header styles */
-header {
+  header {
+      height: 3.125em;
+      background-color: #343557;
+      width: 100%;
+      margin-bottom: 3%;
+      position: relative;
+  }
+  nav img {
+    width: 1em;
+    display: block;
+    margin: 0 auto;
+  }
+
+  nav ul {
+    display: flex;
     height: 3.125em;
-    background-color: #343557;
-    width: 100%;
-    margin-bottom: 3%;
+    list-style: none;
+    padding: 0;
+    margin: 0;
     position: relative;
-}
-nav img {
-  width: 1em;
-  display: block;
-  margin: 0 auto;
-}
+  }
 
-nav ul {
-  display: flex;
-  height: 3.125em;
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  position: relative;
-}
-
-nav li {
-  flex: 1;
-  align-items: center;
-  display: flex;
-  margin-left: 5%;
-}
+  nav li {
+    flex: 1;
+    align-items: center;
+    display: flex;
+    margin-left: 5%;
+  }
 /* end header styles */
 
 h2{
@@ -45,7 +62,6 @@ h2{
     margin-bottom: 2%;
     font-size: 1.2em;
 }
-
 
 label{
   display: block;
@@ -69,10 +85,6 @@ input, textarea{
   font-size: 1em;
 }
 
-
-
-
-
 #userProfile{
   width: 40vw;
   height: 40vw;
@@ -82,6 +94,7 @@ input, textarea{
   border: solid black 1px;
   border-radius: 50%;
   margin-bottom: 5%;
+  background-color: white;
 }
 
 #uploadFile{
@@ -136,6 +149,7 @@ input, textarea{
   margin-bottom: 2%;
   width: fit-content;
   text-decoration: none;
+  transition: .4s;
 }
 
 #premium:hover{
@@ -158,10 +172,6 @@ input[type="radio"], input[type="range"]{
   margin: 0;
 }
 
-input[type="radio"]{
-  display: none;
-}
-
 .radio50{
   width: 50%;
   background-color: #ececec;
@@ -169,7 +179,7 @@ input[type="radio"]{
   padding: 0;
   padding-top: 2%;
   padding-bottom: 2%;
-  /* Dit is waarschijnlijk niet semantisch, maar ik heb nog geen enkel andere oplossing kunnen vinden om 50% breede object naast elkaar te kunnen plaatsen */
+  /* Dit is waarschijnlijk niet semantisch, maar ik heb nog geen enkel andere oplossing kunnen vinden om 50% breedte object naast elkaar te kunnen plaatsen */
   float: left; 
   color: black;
   font-size: 1em;
@@ -180,6 +190,18 @@ input[type="radio"]{
 input[type="radio"]:checked + label{
   background: #c4c4c4
 }
+
+input[type="range"]{
+  width: 80%;
+}
+
+/* #signup input:not(:placeholder-shown){
+  color:red;
+}
+
+#signup input:valid{
+  color:black;
+} */
 
 .warning{
   color: red;
@@ -222,6 +244,7 @@ box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
   top: 25%;
   text-decoration: none;
   font-size: 80%;
+  background-color: white;
 }
 
 .buttonIcon img{
@@ -239,6 +262,147 @@ box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
 
 }
 
-input[type="range"]{
-  width: 80%;
+/* landing page  */
+#landingLogo{
+  width: 40vw;
+  height: 40vw;
+  display: block;
+  margin: auto;
+  margin-top: 20%;
+  margin-bottom: 35%;
+}
+
+#landing a{
+  width: 10em;
+}
+
+#loginButton{
+  background: linear-gradient(to left, #aa3b6a, #7b0867);
+  border-radius: 25px;
+  color: white;
+  cursor: pointer;
+  padding: 2%;
+  display: block;
+  margin: auto;
+  margin-top: 2%;
+  margin-bottom: 2%;
+  width: fit-content;
+  text-decoration: none;
+  transition: .4s;
+}
+
+#loginButton:hover{
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+  background: linear-gradient(to left, #bd4276, #a70c8c);
+}
+
+#registerButton{
+  background: rgba(255, 255, 255, 0.7);
+  border-radius: 25px;
+  color: #5e5e78;
+  cursor: pointer;
+  padding: 2%;
+  display: block;
+  margin: auto;
+  margin-top: 2%;
+  margin-bottom: 2%;
+  width: fit-content;
+  text-decoration: none;
+  transition: .4s;
+}
+
+#registerButton:hover{
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+  background: rgba(255, 255, 255, 1);
+}
+/* end landing page */
+
+input[type="radio"]{
+  display: none ;
+}
+
+/* All possible background theme's */
+
+#cancer{
+  background:url("/images/themes/cancer.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#pisces{
+  background:url("/images/themes/pisces.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#aquarius{
+  background:url("/images/themes/aquarius.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#aries{
+  background:url("/images/themes/aries.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#taurus{
+  background:url("/images/themes/taurus.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#gemini{
+  background:url("/images/themes/cancer.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#leo{
+  background:url("/images/themes/leo.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#virgo{
+  background:url("/images/themes/virgo.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#libra{
+  background:url("/images/themes/libra.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#scorpio{
+  background:url("/images/themes/scorpio.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#sagittarius{
+  background:url("/images/themes/sagittarius.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#capricorn{
+  background:url("/images/themes/capricorn.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+/* end background themes */
+
+#loginContainer{
+  width: 70vw;
+  border: solid 1px #c4c4c4;
+  border-radius: 15px;
+  display: block;
+  margin: auto;
+  padding: 5%;
+  background-color: #cccbcb;
+  margin-top: 25%;
 }
