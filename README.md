@@ -45,7 +45,7 @@ To check for linting errors run
 Please resolve all the errors and warnings before pushing your work.
 
 # Code conventions
-```
+
 It is important to note to-do's like so:
 `// TODO: Do the dishes`
 During development we use VSCode and our code editor picks these Todo's up using the [TODO Parser](https://marketplace.visualstudio.com/items?itemName=minhthai.vscode-todo-parser) plugin.
