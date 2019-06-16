@@ -230,6 +230,7 @@ box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
   margin-bottom: 15%;
   padding-left: 15%;
   padding-right: 15%;
+  color: white;
 }
 
 .buttonIcon{
@@ -407,9 +408,5 @@ input[type="radio"]{
   margin-top: 25%;
 }
 #editHeader{
-  color:white;
-}
-
-#aboutme{
   color:white;
 }
