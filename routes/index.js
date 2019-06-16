@@ -26,8 +26,9 @@ var userDataSchema = new Schema({
 }, {
     collection: 'user-data'
 });
-var userData = mongoose.model('UserData', userDataSchema);
 require('dotenv').config({});
+
+
 
 userDataSchema.pre('save', function (next) {
     var user = this;
@@ -62,6 +63,8 @@ userDataSchema.methods.hashPass = function (givenPassword, cb) {
 };
 
 // assign mongoose data schema to var userdata
+//eslint-disable-next-line
+var userData = mongoose.model('UserData', userDataSchema);
 
 // Local databse
 mongoose.connect(process.env.DB_LOCAL, {

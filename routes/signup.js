@@ -4,6 +4,8 @@ var mongoose = require('mongoose');
 var userData = mongoose.model('UserData');
 require('dotenv').config({});
 
+
+
 router.get('/', function (req, res) {
     res.render('signup', {
         errors: req.session.errors,
@@ -61,7 +63,6 @@ router.post('/insert', function (req, res) {
     if (errors) {
         req.session.errors = errors;
     }
-
     userData.find({
         username: req.body.username
     }, function (err, doc) {
@@ -78,7 +79,14 @@ router.post('/insert', function (req, res) {
             res.redirect('/login');
         }
     });
+    // });
+
+
+    // console.log(items);
 });
+
+
+
 
 //takes the date in the year-month-day format and returns the corrosponding zodiac in a string
 function zodiac(date) {

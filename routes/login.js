@@ -17,6 +17,7 @@ router.post('/check', function (req, res) {
     userData.findOne({
         username: req.body.username
     }, function (err, doc) {
+        console.log(doc);
         if (doc.length == 0) {
             //username doesnt exist
             req.session.errormessage = "Invalid username";
@@ -36,7 +37,8 @@ router.post('/check', function (req, res) {
                     }
                     req.session.loggedin = doc.username;
                     //must become redirect to edit (or matching if that gets done)
-                    res.redirect('/edit');
+                    console.log("we komen hier toch");
+                    return res.redirect('/edit');
                 })
                 .catch(function (err) {
                     return console.log(err);

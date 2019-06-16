@@ -45,8 +45,5 @@
         "indent":"error",
         "linebreak-style":["error","unix"],
         "no-trailing-spaces":"error"
-
-    
-
     }
 }
