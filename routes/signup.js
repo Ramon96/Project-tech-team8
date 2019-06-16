@@ -84,7 +84,6 @@ router.post('/insert', function (req, res) {
                 req.session.userTaken = false;
                 req.session.loggedin = req.body.username;
                 var data = new userData(items);
-                console.log("entry added");
                 data.save();
                 res.redirect('/login');
             }
