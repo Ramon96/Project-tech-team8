@@ -44,24 +44,6 @@ To check for linting errors run
 `eslint ./`
 Please resolve all the errors and warnings before pushing your work.
 
-# Code conventions
-
-It is important to note to-do's like so:
-`// TODO: Do the dishes`
-During development we use VSCode and our code editor picks these Todo's up using the [TODO Parser](https://marketplace.visualstudio.com/items?itemName=minhthai.vscode-todo-parser) plugin.
-
-Please document your code using comments, and specify what a function does.
-
-```
-// This function makes the duck quack.
-Function Quack(duck){
-...
-}
-
-```
-
-During this project we make use of [{{handlebars}}](https://handlebarsjs.com/)
-
 # Merging
 When Merging to the master branch, review with atleast 1 other programmer is required. 
 Your commit message should append the [gitmoji](https://gitmoji.carloscuesta.me/) notation style followed with a description of the work you are going to append to the project.
