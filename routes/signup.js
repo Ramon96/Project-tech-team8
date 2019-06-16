@@ -1,11 +1,8 @@
 var express = require('express');
 var router = express.Router();
 var mongoose = require('mongoose');
-var bcrypt = require('bcrypt');
-require('dotenv').config({});
-
-// var id = process.env.USER_ID;
 var userData = mongoose.model('UserData');
+require('dotenv').config({});
 
 
 
@@ -19,8 +16,31 @@ router.get('/', function (req, res) {
 });
 
 router.post('/insert', function (req, res) {
-    var genderMale;
-    var preferMale;
+    var genderMale = true;
+    var preferMale = true;
+    // converting date of birth to a zodiac sign
+    var zodiacSign = zodiac(req.body.DoB);
+    var errors = req.validationErrors();
+    // template to store in the db
+    var items = {
+        username: req.body.username,
+        profilePicture: "images/capricorn.png",
+        password: req.body.password,
+        premium: false,
+        pushNotification: true,
+        aboutme: "I dont have a about me yet",
+        function: "",
+        company: "",
+        city: "",
+        email: req.body.email,
+        DoB: req.body.DoB,
+        maxDistance: 5,
+        minAge: 18,
+        maxAge: 18,
+        isMale: genderMale,
+        prefMen: preferMale,
+        zodiac: zodiacSign
+    };
 
     if (req.body.gender == "male") {
         genderMale = true;
@@ -33,8 +53,6 @@ router.post('/insert', function (req, res) {
     } else {
         preferMale = false;
     }
-    // converting date of birth to a zodiac sign
-    var zodiacSign = zodiac(req.body.DoB);
 
     // Checking if the passwords and email are valid
     req.check('email', 'This email adress is not valid').isEmail();
@@ -42,52 +60,25 @@ router.post('/insert', function (req, res) {
         min: 6
     }).equals(req.body.confPassword);
 
-    var errors = req.validationErrors();
     if (errors) {
         req.session.errors = errors;
     }
+    userData.find({
+        username: req.body.username
+    }, function (err, doc) {
+        var data = new userData(items);
+        if (doc.length) {
+            // Username was already taken
+            req.session.userTaken = true;
+            res.redirect('/signup');
 
-    // hasing the password before storing it in the database
-    // bcrypt.hash(req.body.password, 10, function (err, hash) {
-    //     if (err) {
-    //         throw err;
-    //     }
-        // template to store in the db
-        var items = {
-            username: req.body.username,
-            profilePicture: "images/capricorn.png",
-            password: req.body.password,
-            premium: false,
-            pushNotification: true,
-            aboutme: "I dont have a about me yet",
-            function: "",
-            company: "",
-            city: "",
-            email: req.body.email,
-            DoB: req.body.DoB,
-            maxDistance: 5,
-            minAge: 18,
-            maxAge: 18,
-            isMale: genderMale,
-            prefMen: preferMale,
-            zodiac: zodiacSign
+        } else {
+            req.session.userTaken = false;
+            req.session.loggedin = req.body.username;
+            data.save();
+            res.redirect('/login');
         }
-        userData.find({
-            username: req.body.username
-        }, function (err, doc) {
-            if (doc.length) {
-                // Username was already taken
-                req.session.userTaken = true;
-                res.redirect('/signup');
-
-            } else {
-                req.session.userTaken = false;
-                req.session.loggedin = req.body.username;
-                var data = new userData(items);
-                data.save();
-                res.redirect('/login');
-            }
-        });
+    });
     // });
 
 
@@ -100,7 +91,7 @@ router.post('/insert', function (req, res) {
 //takes the date in the year-month-day format and returns the corrosponding zodiac in a string
 function zodiac(date) {
     var ymd = date.split("-");
-    var year = ymd[0];
+    // var year = ymd[0];
     var month = ymd[1];
     var day = ymd[2];
 

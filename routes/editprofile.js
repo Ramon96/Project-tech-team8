@@ -4,19 +4,17 @@ var router = express.Router();
 var multer = require('multer');
 var path = require('path');
 var mongoose = require('mongoose');
-require('dotenv').config({});
-
-var id = process.env.USER_ID;
-
 // assign mongoose data schema to var userdata
 var userData = mongoose.model('UserData');
+require('dotenv').config({});
+
 
 /* GET home page. */
-router.get('/', function (req, res, next) {
+router.get('/', function (req, res) {
     if(!req.session.loggedin){
         console.log("Session bestaat nog niet");
         req.session.errormessage = "You need to login first";
-       return res.redirect('/login');
+        return res.redirect('/login');
     }
     userData.findOne({username: req.session.loggedin})
         .then(function (doc) {
@@ -64,11 +62,11 @@ router.post('/upload', function (req, res) {
 });
 
 // Get edit profile page
-router.get('/editprofile', function (req, res, next) {
+router.get('/editprofile', function (req, res) {
     if(!req.session.loggedin){
         console.log("Session bestaat nog niet");
         req.session.errormessage = "You need to login first";
-       return res.redirect('/login');
+        return res.redirect('/login');
     }
     userData.findOne({username: req.session.loggedin})
         .then(function (doc) {
@@ -83,7 +81,7 @@ router.get('/editprofile', function (req, res, next) {
 });
 
 // Change changed values in database
-router.post('/editprofile/update', function (req, res, next) {
+router.post('/editprofile/update', function (req, res) {
     userData.findOne({username: req.session.loggedin}).then(function (doc) {
         doc.aboutme = req.body.aboutme;
         doc.function = req.body.function;
@@ -104,7 +102,7 @@ router.get('/settings', function (req, res) {
     if(!req.session.loggedin){
         console.log("Session bestaat nog niet");
         req.session.errormessage = "You need to login first";
-       return res.redirect('/login');
+        return res.redirect('/login');
     }
     userData.findOne({username: req.session.loggedin})
         .then(function (doc) {
@@ -146,7 +144,7 @@ router.post('/settings/update', function (req, res) {
     });
     req.session.loggedin = req.body.username;
     console.log(req.session.loggedin);
-    return res.redirect('/edit/settings')
+    return res.redirect('/edit/settings');
 });
 
 // check file type
@@ -184,7 +182,7 @@ const uploadImage = multer({
 
 function zodiac(date) {
     var ymd = date.split("-");
-    var year = ymd[0];
+    // var year = ymd[0];
     var month = ymd[1];
     var day = ymd[2];
 
