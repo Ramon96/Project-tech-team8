@@ -21,7 +21,7 @@ var matchingRouter = require('./routes/match');
 var app = express();
 
 // setup engine and views
-app.engine('hbs', hbs({extname: 'hbs', defaultLayout: 'layout', layoutsDir: __dirname + '/views/layouts/'}))
+app.engine('hbs', hbs({extname: 'hbs', defaultLayout: 'layout', layoutsDir: __dirname + '/views/layouts/'}));
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'hbs');
 
@@ -50,7 +50,7 @@ app.use(function(req, res, next) {
 });
 
 // error handler
-app.use(function(err, req, res, next) {
+app.use(function(err, req, res,) {
   // set locals, only providing error in development
   res.locals.message = err.message;
   res.locals.error = req.app.get('env') === 'development' ? err : {};
@@ -62,6 +62,6 @@ app.use(function(err, req, res, next) {
 
 app.listen(function(){
   console.log("Server is running..");
-})
+});
 
 module.exports = app;

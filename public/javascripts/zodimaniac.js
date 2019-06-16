@@ -9,6 +9,6 @@ if (document.getElementById("maxDistSlider") !== null) {
     document.getElementById("maxDistSlider").addEventListener("change", function(){
         document.getElementById('rangeValue').value = document.getElementById("maxDistSlider").value + " Km";
     
-    })
+    });
 }
 

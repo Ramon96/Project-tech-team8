@@ -1,7 +1,6 @@
 {
     "env": {
         "browser": true,
-        "es5": true,
         "node": true
     },
     "extends": "eslint:recommended",
@@ -13,6 +12,7 @@
         "ecmaVersion": 2018
     },
     "rules": {
-        "semi": "error"
+        "semi": "error",
+        "no-console": 0
     }
 }

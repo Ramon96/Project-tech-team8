@@ -1,7 +1,6 @@
 var express = require('express');
 var router = express.Router();
 var mongoose = require('mongoose');
-var bcrypt = require('bcrypt');
 require('dotenv').config({});
 
 // var id = process.env.USER_ID;
@@ -71,7 +70,7 @@ router.post('/insert', function (req, res) {
             isMale: genderMale,
             prefMen: preferMale,
             zodiac: zodiacSign
-        }
+        };
         userData.find({
             username: req.body.username
         }, function (err, doc) {
@@ -100,7 +99,7 @@ router.post('/insert', function (req, res) {
 //takes the date in the year-month-day format and returns the corrosponding zodiac in a string
 function zodiac(date) {
     var ymd = date.split("-");
-    var year = ymd[0];
+    // var year = ymd[0];
     var month = ymd[1];
     var day = ymd[2];
 

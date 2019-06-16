@@ -58,7 +58,7 @@ userDataSchema.methods.hashPass = function (givenPassword, cb) {
             return cb(null, hashedPassword);
         });
     });
-}
+};
 
 // assign mongoose data schema to var userdata
 var userData = mongoose.model('UserData', userDataSchema);
@@ -75,7 +75,7 @@ mongoose.connect(process.env.DB_LOCAL, {
 
 // Logs a message when succesfully connected to the database  
 mongoose.connection.on('connected', function () {
-    console.log("Connected to mongoose..")
+    console.log("Connected to mongoose..");
 });
 
 // Getting the ladingpage
@@ -118,7 +118,7 @@ router.post('/testarea/insert', function (req, res) {
         maxAge: req.body.maxAge,
         isMale: req.body.isMale,
         prefMen: req.body.prefMen
-    }
+    };
     var data = new userData(item);
     data.save();
     res.redirect('/testarea');
