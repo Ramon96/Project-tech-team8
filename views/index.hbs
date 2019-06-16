@@ -5,7 +5,7 @@
             </ul>
         </nav>
     </header>
-<h1>{{ Username }}</h1>
+<h1 id="editHeader">{{ Username }}</h1>
 <div id="userProfileContainer">
   <img id="userProfile" src="{{UserProfile}}" alt="This is your profile picture"> {{#if message}} {{message}} {{else}} {{/if}}
   <form id="profileForm" action="/edit/upload" method="POST" enctype="multipart/form-data">
