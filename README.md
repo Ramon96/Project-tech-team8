@@ -31,13 +31,15 @@ This is because we are using a .env file that contains valueable information.
 Make sure to contact the repository owner to recieve the dotenv details
 
 # This App is build using
-* Code editor of choice
-* HTML
-* CSS
-* Javascript
-* NodeJS
-* MongoDB
-* Lots of coffee ☕
+* [Express](https://expressjs.com/) - Web framework for NodeJS
+* [Express-handlebars](https://www.npmjs.com/package/express-handlebars) - Templating engine for express
+* [Express-sessions](https://www.npmjs.com/package/express-session) - Create a session
+* [Express-validator](https://express-validator.github.io) - Collection of form validators 
+* [Mongoose](https://mongoosejs.com/) - Layer on top of MongoDB to make MondoDB eassier to use
+* [Multer](https://github.com/expressjs/multer) - Middleware for multipart form/data
+* [dotenv](https://www.npmjs.com/package/dotenv) - zero-dependency module that loads environment variables from a .env
+* [body-parser](https://www.npmjs.com/package/body-parser) - Parse incoming request bodies in a middleware before your handlers
+* [bcrypt](https://www.npmjs.com/package/bcrypt) - Library for password hashing
 
 # Eslint
 To check for linting errors run
@@ -52,6 +54,9 @@ node_modules
 .DS_Store
 .env
 ```
+
+# Wiki
+For the research, technical researcg and collebarting please check out our [Wiki](https://github.com/Ramon96/Project-tech-team8/wiki)
 
 # Author(s)
 Ramon Meijers
