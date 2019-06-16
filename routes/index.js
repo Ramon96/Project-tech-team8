@@ -67,14 +67,14 @@ userDataSchema.methods.hashPass = function (givenPassword, cb) {
 var userData = mongoose.model('UserData', userDataSchema);
 
 // Local databse
-mongoose.connect(process.env.DB_LOCAL, {
-    useNewUrlParser: true
-});
+// mongoose.connect(process.env.DB_LOCAL, {
+//     useNewUrlParser: true
+// });
 
 // Deployed database
-// mongoose.connect(process.env.DB_URL, {
-//     useNewUrlParser: true
-//   });
+mongoose.connect(process.env.DB_URL, {
+    useNewUrlParser: true
+  });
 
 // Logs a message when succesfully connected to the database
 mongoose.connection.on('connected', function () {
