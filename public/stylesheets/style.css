@@ -1,16 +1,17 @@
 html,
 body {
-    font-family: 'Roboto', sans-serif;
-    margin: 0;
-    font-size: 1em;
-    text-align: center;
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  font-size: 1em;
+  text-align: center;
 }
 
-#landing{
+#landing {
   background: rgba(0, 0, 0, 1);
 }
+
 /* Background with an overlay */
-#landing::after{
+#landing::after {
   background: url("../images/landing_bg.png") no-repeat;
   background-size: cover;
   content: "";
@@ -20,50 +21,52 @@ body {
   right: 0;
   bottom: 0;
   z-index: -1;
-  opacity: 0.8; 
+  opacity: 0.8;
 }
 
 /* Header styles */
-  header {
-      height: 3.125em;
-      background-color: #343557;
-      width: 100%;
-      margin-bottom: 3%;
-      position: relative;
-  }
-  nav img {
-    width: 1em;
-    display: block;
-    margin: 0 auto;
-  }
-
-  nav ul {
-    display: flex;
-    height: 3.125em;
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    position: relative;
-  }
-
-  nav li {
-    flex: 1;
-    align-items: center;
-    display: flex;
-    margin-left: 5%;
-  }
-/* end header styles */
-
-h2{
-  font-weight: normal;
-  color: #343557;
-    text-align: left;
-    padding-left: 5%;
-    margin-bottom: 2%;
-    font-size: 1.2em;
+header {
+  height: 3.125em;
+  background-color: #343557;
+  width: 100%;
+  margin-bottom: 3%;
+  position: relative;
 }
 
-label{
+nav img {
+  width: 1em;
+  display: block;
+  margin: 0 auto;
+}
+
+nav ul {
+  display: flex;
+  height: 3.125em;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  position: relative;
+}
+
+nav li {
+  flex: 1;
+  align-items: center;
+  display: flex;
+  margin-left: 5%;
+}
+
+/* end header styles */
+
+h2 {
+  font-weight: normal;
+  color: #343557;
+  text-align: left;
+  padding-left: 5%;
+  margin-bottom: 2%;
+  font-size: 1.2em;
+}
+
+label {
   display: block;
   color: #343557;
   text-align: left;
@@ -72,7 +75,8 @@ label{
   font-size: 1.2em;
 }
 
-input, textarea{
+input,
+textarea {
   width: 100%;
   font-family: 'Roboto', sans-serif;
   box-sizing: border-box;
@@ -85,7 +89,7 @@ input, textarea{
   font-size: 1em;
 }
 
-#userProfile{
+#userProfile {
   width: 40vw;
   height: 40vw;
   object-fit: cover;
@@ -97,15 +101,16 @@ input, textarea{
   background-color: white;
 }
 
-#uploadFile{
+#uploadFile {
   width: 0.1px;
-	height: 0.1px;
-	opacity: 0;
-	overflow: hidden;
-	position: absolute;
-	z-index: -1;
+  height: 0.1px;
+  opacity: 0;
+  overflow: hidden;
+  position: absolute;
+  z-index: -1;
 }
-#userProfileContainer{
+
+#userProfileContainer {
   position: relative;
 }
 
@@ -128,16 +133,16 @@ input, textarea{
   left: 60%;
 }
 
-#userProfileContainer label:hover{
+#userProfileContainer label:hover {
   background: #3e4067;
 }
 
 #userProfileContainer label:focus {
-	outline: 1px dotted #000;
-	outline: -webkit-focus-ring-color auto 5px;
+  outline: 1px dotted #000;
+  outline: -webkit-focus-ring-color auto 5px;
 }
 
-#premium{
+#premium {
   background: linear-gradient(to left, #aa3b6a, #7b0867);
   border-radius: 25px;
   color: white;
@@ -152,27 +157,28 @@ input, textarea{
   transition: .4s;
 }
 
-#premium:hover{
+#premium:hover {
   box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
   background: linear-gradient(to left, #bd4276, #a70c8c);
 }
 
-#indexMenu{
+#indexMenu {
   position: relative;
 }
 
-p{
+p {
   font-weight: lighter;
   color: #565656;
   font-style: italic;
 }
 
-input[type="radio"], input[type="range"]{
+input[type="radio"],
+input[type="range"] {
   box-sizing: border-box;
   margin: 0;
 }
 
-.radio50{
+.radio50 {
   width: 50%;
   background-color: #ececec;
   text-align: center;
@@ -180,18 +186,18 @@ input[type="radio"], input[type="range"]{
   padding-top: 2%;
   padding-bottom: 2%;
   /* Dit is waarschijnlijk niet semantisch, maar ik heb nog geen enkel andere oplossing kunnen vinden om 50% breedte object naast elkaar te kunnen plaatsen */
-  float: left; 
+  float: left;
   color: black;
   font-size: 1em;
   margin-bottom: 5%;
   cursor: pointer;
 }
 
-input[type="radio"]:checked + label{
+input[type="radio"]:checked+label {
   background: #c4c4c4
 }
 
-input[type="range"]{
+input[type="range"] {
   width: 80%;
 }
 
@@ -203,37 +209,37 @@ input[type="range"]{
   color:black;
 } */
 
-.warning{
+.warning {
   color: red;
 }
 
-button[type="submit"]{
-    background: #343557;
-    border-radius: 25px;
-    color: white;
-    cursor: pointer;
-    padding: 2%;
-    display: block;
-    margin: auto;
-    margin-top: 2%;
-    margin-bottom: 2%;
-    width: fit-content;
-    text-decoration: none;
+button[type="submit"] {
+  background: #343557;
+  border-radius: 25px;
+  color: white;
+  cursor: pointer;
+  padding: 2%;
+  display: block;
+  margin: auto;
+  margin-top: 2%;
+  margin-bottom: 2%;
+  width: fit-content;
+  text-decoration: none;
 }
 
-button[type="submit"]:hover{
-background: #3e4067;
-box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+button[type="submit"]:hover {
+  background: #3e4067;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
 }
 
-#indexBio{
+#indexBio {
   margin-bottom: 15%;
   padding-left: 15%;
   padding-right: 15%;
   color: white;
 }
 
-.buttonIcon{
+.buttonIcon {
   border: solid 1px #cccbcb;
   border-radius: 50%;
   display: block;
@@ -248,23 +254,23 @@ box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
   background-color: white;
 }
 
-.buttonIcon img{
+.buttonIcon img {
   width: 2em;
   height: 2em;
 }
 
-.buttonIcon:nth-of-type(2){
+.buttonIcon:nth-of-type(2) {
   left: 55%;
 }
 
-.buttonIcon:hover{
+.buttonIcon:hover {
   border: solid 1px gray;
-box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
 
 }
 
 /* landing page  */
-#landingLogo{
+#landingLogo {
   width: 40vw;
   height: 40vw;
   display: block;
@@ -273,11 +279,11 @@ box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
   margin-bottom: 35%;
 }
 
-#landing a{
+#landing a {
   width: 10em;
 }
 
-#loginButton{
+#loginButton {
   background: linear-gradient(to left, #aa3b6a, #7b0867);
   border-radius: 25px;
   color: white;
@@ -292,12 +298,12 @@ box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
   transition: .4s;
 }
 
-#loginButton:hover{
+#loginButton:hover {
   box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
   background: linear-gradient(to left, #bd4276, #a70c8c);
 }
 
-#registerButton{
+#registerButton {
   background: rgba(255, 255, 255, 0.7);
   border-radius: 25px;
   color: #5e5e78;
@@ -312,92 +318,94 @@ box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
   transition: .4s;
 }
 
-#registerButton:hover{
+#registerButton:hover {
   box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
   background: rgba(255, 255, 255, 1);
 }
+
 /* end landing page */
 
-input[type="radio"]{
-  display: none ;
+input[type="radio"] {
+  display: none;
 }
 
 /* All possible background theme's */
 
-#cancer{
-  background:url("/images/themes/cancer.jpg");
+#cancer {
+  background: url("/images/themes/cancer.jpg");
   background-repeat: no-repeat;
   background-size: cover;
 }
 
-#pisces{
-  background:url("/images/themes/pisces.jpg");
+#pisces {
+  background: url("/images/themes/pisces.jpg");
   background-repeat: no-repeat;
   background-size: cover;
 }
 
-#aquarius{
-  background:url("/images/themes/aquarius.jpg");
+#aquarius {
+  background: url("/images/themes/aquarius.jpg");
   background-repeat: no-repeat;
   background-size: cover;
 }
 
-#aries{
-  background:url("/images/themes/aries.jpg");
+#aries {
+  background: url("/images/themes/aries.jpg");
   background-repeat: no-repeat;
   background-size: cover;
 }
 
-#taurus{
-  background:url("/images/themes/taurus.jpg");
+#taurus {
+  background: url("/images/themes/taurus.jpg");
   background-repeat: no-repeat;
   background-size: cover;
 }
 
-#gemini{
-  background:url("/images/themes/cancer.jpg");
+#gemini {
+  background: url("/images/themes/cancer.jpg");
   background-repeat: no-repeat;
   background-size: cover;
 }
 
-#leo{
-  background:url("/images/themes/leo.jpg");
+#leo {
+  background: url("/images/themes/leo.jpg");
   background-repeat: no-repeat;
   background-size: cover;
 }
 
-#virgo{
-  background:url("/images/themes/virgo.jpg");
+#virgo {
+  background: url("/images/themes/virgo.jpg");
   background-repeat: no-repeat;
   background-size: cover;
 }
 
-#libra{
-  background:url("/images/themes/libra.jpg");
+#libra {
+  background: url("/images/themes/libra.jpg");
   background-repeat: no-repeat;
   background-size: cover;
 }
 
-#scorpio{
-  background:url("/images/themes/scorpio.jpg");
+#scorpio {
+  background: url("/images/themes/scorpio.jpg");
   background-repeat: no-repeat;
   background-size: cover;
 }
 
-#sagittarius{
-  background:url("/images/themes/sagittarius.jpg");
+#sagittarius {
+  background: url("/images/themes/sagittarius.jpg");
   background-repeat: no-repeat;
   background-size: cover;
 }
 
-#capricorn{
-  background:url("/images/themes/capricorn.jpg");
+#capricorn {
+  background: url("/images/themes/capricorn.jpg");
   background-repeat: no-repeat;
   background-size: cover;
 }
+
 /* end background themes */
 
-#loginContainer{
+#loginContainer {
   width: 70vw;
   border: solid 1px #c4c4c4;
   border-radius: 15px;
@@ -407,6 +415,36 @@ input[type="radio"]{
   background-color: #cccbcb;
   margin-top: 25%;
 }
-#editHeader{
-  color:white;
+
+#editHeader {
+  color: white;
+}
+
+.jsButton {
+  display: none;
+}
+
+.jsButton {
+  background: #343557;
+  border-radius: 25px;
+  color: white;
+  cursor: pointer;
+  padding: 2%;
+  display: block;
+  margin: auto;
+  margin-top: 2%;
+  margin-bottom: 2%;
+  width: fit-content;
+  text-decoration: none;
+}
+
+.jsButton:hover {
+  border: solid 1px gray;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+}
+
+progress{
+  display: flow-root;
+  margin: auto;
+  width: 80%;
 }
