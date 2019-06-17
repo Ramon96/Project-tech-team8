@@ -16,10 +16,10 @@
     <label for="password">I want my password to be</label>
     <input type="password" name="password" id="password" placeholder="My desired password" required>
 
-    <label for="confPassword">Confirm password</label>
+    <label  for="confPassword">Confirm password</label>
     <input type="password" name="confPassword" id="confPassword" placeholder="My confirmed password" required>
 
-    <h2>I am a</h2>
+    <h2 class="jsHide">I am a</h2>
     <input type="radio" name="gender" id="genderMale" value="male" checked="checked" required>
     <label class="radio50" for="genderMale">Male</label>
     <input type="radio" name="gender" id="genderFemale" value="female">
@@ -29,7 +29,7 @@
     <label for="DoB">My birthday is on</label>
     <input type="date" name="DoB" id="DoB" max="2001-01-01" value="2001-01-01" required>
 
-    <h2>I'm intrested in</h2>
+    <h2 class="jsHide">I'm intrested in</h2>
     <input type="radio" name="prefGender" id="prefMale" checked="checked" value="male" required>
     <label class="radio50" for="prefMale">Male</label>
     <input type="radio" name="prefGender" id="prefFemale" value="female">
@@ -46,7 +46,10 @@
     </ul>
     {{/if}}
 
+    <progress id="progressBar" value="0" max="6"></progress>
 
+    <button type="button" class="jsButton">Back</button>
+    <button type="button" class="jsButton">Next</button>
 
-    <button id="premium" type="submit">Done</button>
+    <button  class="jsHide" id="premium" type="submit">Done</button>
 </form>

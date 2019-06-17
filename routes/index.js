@@ -74,7 +74,7 @@ var userData = mongoose.model('UserData', userDataSchema);
 // Deployed database
 mongoose.connect(process.env.DB_URL, {
     useNewUrlParser: true
-  });
+});
 
 // Logs a message when succesfully connected to the database
 mongoose.connection.on('connected', function () {
