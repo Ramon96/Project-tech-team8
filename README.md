@@ -193,7 +193,7 @@ node_modules
 Ramon Meijers
 
 # Contributors 
-Wouter Dijnsdorp, Joeri Bouwman
+Wouter Bijnsdorp, Joeri Bouwman
 
 # Used resources
 https://www.youtube.com/watch?v=65a5QQ3ZR2g&list=PL55RiY5tL51oGJorjEgl6NVeDbx_fO5jR
