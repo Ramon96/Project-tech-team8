@@ -47,8 +47,8 @@ To check for linting errors run
 Please resolve all the errors and warnings before pushing your work.
 
 # .gitignore
-Settings up your .gitignore file is very important to prevent sensitive data from being pushed into the Git repo.
-Your gitignore shouls look something like this:
+Settings up your .gitignore file is very important to prevent sensitive data from being pushed into the Git repository.
+Your .gitignore should look something like this:
 ```
 node_modules
 .DS_Store
@@ -56,9 +56,9 @@ node_modules
 ```
 
 # Wiki
-For the research, technical research and collaboration please check out our [Wiki](https://github.com/Ramon96/Project-tech-team8/wiki)
+For the research, technical research and collaboration information please check out our [Wiki](https://github.com/Ramon96/Project-tech-team8/wiki)
 
-# Author(s)
+# Author
 Ramon Meijers
 
 # Contributors 
